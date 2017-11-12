@@ -6,3 +6,10 @@
 **Scope:** Farming component(*Planting, watering, harvesting crops*) Brewing (*getting ingredients from farming to brew beer using recipes*), Selling products (*to shops /pubs with simple economy implemented*).
 
 **Estimates :** TBD after prototyping each of the game core components.
+
+**Currently working on :**
+
+Farming :
+- [x] *Planting*
+- [ ] *Watering*
+- [ ] *Harvesting*
