@@ -1,18 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ScriptSeed : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
+public class ScriptSeed : MonoBehaviour
+{
     void OnMouseDown()
     {
         GameController.currentTool = "seed";
