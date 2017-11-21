@@ -55,7 +55,7 @@
 Farming :
 - [x] Planting
 - [x] Harvesting
-- [ ] Watering
+- [x] Watering
 
 
 **References:**
