@@ -9,7 +9,7 @@ public class WaterController : MonoBehaviour
         if (GameController.currentTool == "bucket")
         {
             GameController.waterCount++;
-            Debug.Log(GameController.waterCount);
+            Debug.Log("Water : " + GameController.waterCount);
         }
     }
 }

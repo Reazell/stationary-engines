@@ -6,7 +6,19 @@ public class ScriptBucket : MonoBehaviour
     public Sprite isFull;
     public Sprite isEmpty;
     public SpriteRenderer[] spriteRenderer;
-
+    
+    void Update()
+    {
+        if (GameController.waterCount == 0)
+        {
+            GetComponent<SpriteRenderer>().sprite = isEmpty;
+        }
+        else
+        {
+            GetComponent<SpriteRenderer>().sprite = isFull;
+        }
+        }
+    
 
     void OnMouseDown()
     {
