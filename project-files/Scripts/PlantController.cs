@@ -14,6 +14,10 @@ public class PlantController : MonoBehaviour
     public Sprite HarvestReady;
     public Sprite HarvestReady_Wet;
     public SpriteRenderer[] spriteRenderer;
+
+
+
+
     bool isHarvestable = false;
     bool isStage1 = false;
 
@@ -49,10 +53,8 @@ public class PlantController : MonoBehaviour
                 GetComponent<SpriteRenderer>().sprite = T_Seed_Wet;
                 Debug.Log("Seed planted");
                 Invoke("SpriteStage1", 5);
-                if (isStage1 == true)
-                {
-                    Invoke("SpriteHarvestReady", 10);
-                }
+                Invoke("SpriteHarvestReady", 10);
+                
             }
         }
     
@@ -72,7 +74,6 @@ public class PlantController : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().sprite = Stage1_Wet;
         Debug.Log("Stage 1");
-        isStage1 = true;
     }
 
     void SpriteHarvestReady()
@@ -81,5 +82,26 @@ public class PlantController : MonoBehaviour
         isHarvestable = true;
         Debug.Log("Harvest ready");
         
+    }
+
+
+    string Message = "";
+
+
+    void OnGUI()
+    {
+        GUI.Label(new Rect(10, 10, 200, 30), Message);
+    }
+
+
+    void OnMouseEnter()
+    {
+        Message = "Ground to plant seeds";
+    }
+
+
+    void OnMouseExit()
+    {
+        Message = "";
     }
 }

@@ -25,4 +25,24 @@ public class ScriptBucket : MonoBehaviour
         GameController.currentTool = "bucket";
         Debug.Log(GameController.currentTool);
     }
+
+    string Message = "";
+
+
+    void OnGUI()
+    {
+        GUI.Label(new Rect(10, 10, 200, 30), Message);
+    }
+
+
+    void OnMouseEnter()
+    {
+        Message = "Bucket Tool";
+    }
+
+
+    void OnMouseExit()
+    {
+        Message = "";
+    }
 }
