@@ -59,7 +59,7 @@ Farming :
 Gameplay :
 - [x] Simplified Brewing
 - [x] Selling
-- [ ] Buying
+- [x] Buying
 - [ ] Time Controller
 
 UI :
