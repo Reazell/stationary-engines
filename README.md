@@ -30,7 +30,6 @@
   * Simplified brewing
   * Acquiring equipment
   * Selling/Buyig
-  * Player Controller
   * Morning - Evening cycle with sleeping in the night (to proceed to the next day).
 
   
@@ -56,6 +55,18 @@ Farming :
 - [x] Planting
 - [x] Harvesting
 - [x] Watering
+
+Gameplay :
+- [x] Simplified Brewing
+- [x] Selling
+- [ ] Buying
+- [ ] Time Controller
+
+UI :
+- [x] Menu
+- [ ] Inventory
+- [x] Store
+
 
 
 **References:**
