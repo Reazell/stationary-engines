@@ -62,6 +62,7 @@ public class PlantController : MonoBehaviour
             if (isHarvestable == true)
             {
                 GameController.hopsCount++;
+                PlayerProgressionScript.harvestingExp = PlayerProgressionScript.harvestingExp + 5;
                 Debug.Log("Hops: " + GameController.hopsCount);
                 GetComponent<SpriteRenderer>().sprite = T_Grass;
                 isHarvestable = false;
