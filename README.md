@@ -49,7 +49,7 @@
 * Detailed brewing with custom bottles and ingredients
 * Populating game map with various interactions and activities
 
-**Prototyping in progress :**
+**Prototyping progression :**
 
 Farming :
 - [x] Planting
@@ -60,14 +60,21 @@ Gameplay :
 - [x] Simplified Brewing
 - [x] Selling
 - [x] Buying
-- [ ] Time Controller
+- [x] Time Controller
 
 UI :
 - [x] Menu
-- [ ] Inventory
+- [x] Inventory
 - [x] Store
 
+Design :
+- [ ] Game economy
+- [ ] Various hops/beer types
 
+Optional Components :
+- [ ] Accepting orders
+- [ ] Start game screen
+- [ ] Quality rating on all products to determine price/bonus to orderds
 
 **References:**
 
