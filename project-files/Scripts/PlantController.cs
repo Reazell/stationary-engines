@@ -4,7 +4,7 @@ using System.Collections;
 public class PlantController : MonoBehaviour
 {
     public Sprite T_Grass;
-    public Sprite T_Dirt;
+    public  Sprite T_Dirt;
     public Sprite WetDirt;
     public Sprite T_Seed;
     public Sprite T_Seed_Wet;
@@ -27,6 +27,7 @@ public class PlantController : MonoBehaviour
         if (GameController.currentTool == "hoe")
         {
             GetComponent<SpriteRenderer>().sprite = T_Dirt;
+            GameController.energyValue--;
         }
 
 
@@ -62,7 +63,7 @@ public class PlantController : MonoBehaviour
             if (isHarvestable == true)
             {
                 GameController.hopsCount++;
-                PlayerProgressionScript.harvestingExp = PlayerProgressionScript.harvestingExp + 5;
+                PlayerProgressionScript.harvestingExp++;
                 Debug.Log("Hops: " + GameController.hopsCount);
                 GetComponent<SpriteRenderer>().sprite = T_Grass;
                 isHarvestable = false;

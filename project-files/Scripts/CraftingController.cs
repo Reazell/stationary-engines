@@ -14,6 +14,7 @@ public class CraftingController : MonoBehaviour {
             GameController.waterCount--;
             GameController.hopsCount--;
             GameController.bottleCount--;
+            PlayerProgressionScript.brewingExp++;
             Debug.Log("Beer count: " + GameController.pissBeerCount);
         }
         else
@@ -21,7 +22,8 @@ public class CraftingController : MonoBehaviour {
             if (GameController.waterCount <= 0)
             {
                 Debug.Log("Not enough water");
-            }else
+            }
+            else
             {
                 if (GameController.hopsCount <= 0)
                 {

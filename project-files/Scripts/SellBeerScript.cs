@@ -1,14 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SellHopsScript : MonoBehaviour
+public class SellBeerScript : MonoBehaviour
 {
 
 
     public static SpriteRenderer renderer;
     public static BoxCollider2D collider;
-
-    // Use this for initialization
     void Start()
     {
         renderer = GetComponent<SpriteRenderer>();
@@ -19,20 +17,19 @@ public class SellHopsScript : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (GameController.hopsCount == 0)
+        if (GameController.pissBeerCount == 0)
         {
-            Debug.Log("No hops to sell");
+            Debug.Log("No beer to sell");
         }
         else
         {
-            if (GameController.hopsCount > 0)
+            if (GameController.pissBeerCount > 0)
             {
-                GameController.hopsCount--;
-                GameController.moneyCount++;
-                Debug.Log("Ilosc chmielu :" + GameController.hopsCount);
+                GameController.pissBeerCount--;
+                GameController.moneyCount = GameController.moneyCount + GameController.pissBeerValue;
+                Debug.Log("Ilosc piwa :" + GameController.pissBeerCount);
                 Debug.Log("Ilosc pinionca :" + GameController.moneyCount);
             }
         }
-
     }
 }
