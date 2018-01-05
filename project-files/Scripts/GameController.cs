@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour {
     public static int currentDay = 1;
 
     public static bool storeIsClicked = false;
+    public static bool isTired = false;
 	void Start ()
     {
         Debug.Log("Ilosc butelek: " + bottleCount);
@@ -26,9 +27,13 @@ public class GameController : MonoBehaviour {
 
     void Update()
     {
-        Message = "Ilosc pieniedzy : " + moneyCount + " Ilosc butelek : " + bottleCount + " Ilosc chmielu : " + hopsCount + " Ilosc piwa : " + pissBeerCount;
+        Message = "Ilosc pieniedzy : " + moneyCount + " Ilosc wody: " + waterCount + " Ilosc butelek : " + bottleCount + " Ilosc chmielu : " + hopsCount + " Ilosc piwa : " + pissBeerCount;
         Message2 = "Energy : " + energyValue + "/" + maxEnergyValue;
         Message3 = "Current day: " + currentDay;
+        if(energyValue <= 0)
+        {
+            isTired = true;            
+        }
     }
 
     void OnGUI()

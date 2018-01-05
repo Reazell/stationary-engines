@@ -23,42 +23,45 @@ public class PlantController : MonoBehaviour
 
     void OnMouseDown()
     {
-
-        if (GameController.currentTool == "hoe")
+        if (GameController.isTired == false)
         {
-            GetComponent<SpriteRenderer>().sprite = T_Dirt;
-            GameController.energyValue--;
-        }
 
-
-        if (GameController.currentTool == "bucket")
-        {
-            if (GameController.waterCount > 0)
+            if (GameController.currentTool == "hoe")
             {
-                if (GetComponent<SpriteRenderer>().sprite = T_Dirt)
+                GetComponent<SpriteRenderer>().sprite = T_Dirt;
+                GameController.energyValue--;
+            }
+
+
+            if (GameController.currentTool == "bucket")
+            {
+                if (GameController.waterCount > 0)
                 {
-                    GetComponent<SpriteRenderer>().sprite = WetDirt;
-                    GameController.waterCount--;
+                    if (GetComponent<SpriteRenderer>().sprite = T_Dirt)
+                    {
+                        GetComponent<SpriteRenderer>().sprite = WetDirt;
+                        GameController.waterCount--;
+                        GameController.energyValue--;
+                    }
                 }
             }
-        }
 
-        if (GameController.currentTool == "seed")
-        {
-            if (GetComponent<SpriteRenderer>().sprite != WetDirt)
+            if (GameController.currentTool == "seed")
             {
-                Debug.Log("Not wet dirt");
+                if (GetComponent<SpriteRenderer>().sprite != WetDirt)
+                {
+                    Debug.Log("Not wet dirt");
+                }
+                else
+                {
+                    GetComponent<SpriteRenderer>().sprite = T_Seed_Wet;
+                    Debug.Log("Seed planted");
+                    Invoke("SpriteStage1", 5);
+                    Invoke("SpriteHarvestReady", 10);
+
+                }
             }
-            else
-            {
-                GetComponent<SpriteRenderer>().sprite = T_Seed_Wet;
-                Debug.Log("Seed planted");
-                Invoke("SpriteStage1", 5);
-                Invoke("SpriteHarvestReady", 10);
-                
-            }
-        }
-    
+
 
             if (isHarvestable == true)
             {
@@ -69,6 +72,11 @@ public class PlantController : MonoBehaviour
                 isHarvestable = false;
             }
         }
+        else
+        {
+            Debug.Log("You are tired, go to sleep");
+        }
+    }
     
     
 
@@ -86,21 +94,16 @@ public class PlantController : MonoBehaviour
         
     }
 
-
     string Message = "";
-
-
     void OnGUI()
     {
         GUI.Label(new Rect(10, 10, 200, 30), Message);
     }
 
-
     void OnMouseEnter()
     {
         Message = "Ground to plant seeds";
     }
-
 
     void OnMouseExit()
     {

@@ -15,7 +15,7 @@ public class SellScript : MonoBehaviour {
             {
 
 
-                GameController.moneyCount = GameController.pissBeerCount * (GameController.pissBeerValue + (GameController.pissBeerValue * PlayerProgressionScript.brewingBonus));
+                GameController.moneyCount = GameController.pissBeerCount * GameController.pissBeerValue;
                 GameController.pissBeerCount = 0;
                 Debug.Log("Ilosc sikaczy :" + GameController.pissBeerCount);
                 Debug.Log("Hajsung :" + GameController.moneyCount);

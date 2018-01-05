@@ -10,7 +10,6 @@ public class PlayerProgressionScript : MonoBehaviour {
     public static int brewingLvl;
     public static int harvestingLvl;
 
-
 	void Update () {
 	    
         if (harvestingExp < 5)
@@ -23,11 +22,13 @@ public class PlayerProgressionScript : MonoBehaviour {
         {
             harvestingBonus = 0.05;
             harvestingLvl = 2;
+            GameController.maxEnergyValue = 30;
         }
         if (harvestingExp >=10 && harvestingExp < 25)
         {
             harvestingBonus = 0.1;
             harvestingLvl = 3;
+            GameController.maxEnergyValue = 35;
         }
 
         if (brewingExp < 5)

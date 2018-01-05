@@ -21,6 +21,12 @@ public class StoreCloseScript : MonoBehaviour {
         SellBottleScript.renderer.enabled = false;
         BuyBottleScript.collider.enabled = false;
         BuyBottleScript.renderer.enabled = false;
+        BuyHopsScript.renderer.enabled = false;
+        BuyHopsScript.collider.enabled = false;
+        SellHopsScript.renderer.enabled = false;
+        SellHopsScript.collider.enabled = false;
+        SellBeerScript.renderer.enabled = false;
+        SellBeerScript.renderer.enabled = false;
 
     }
 

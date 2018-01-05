@@ -7,6 +7,7 @@ public class SleepScript : MonoBehaviour {
     {
         GameController.energyValue = GameController.maxEnergyValue;
         GameController.currentDay++;
+        GameController.isTired = false;
 
     }
 
