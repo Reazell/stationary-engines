@@ -2,29 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CannonBall : MonoBehaviour {
+public class CannonBall : MonoBehaviour
+{
+    #region Inspector Variables
+    public ObjectPool  PoolRef;
     [SerializeField] private float _Speed = 10.0f;
-    [SerializeField] private float _Life = 3.0f;
-    public ObjectPool _Pool;
+    [SerializeField] public static float _Life = 3.0f;
+    #endregion Inspector Variables
+
+    #region Unity Methods
+
     private void Update()
     {
         transform.position += transform.forward * _Speed * Time.deltaTime;
 
         _Life -= Time.deltaTime;
-        if(_Life <= 0.0f)
+        if (_Life <= 0.0f)
         {
-            var reference = GetComponent<PoolReference>();
-            if(reference != null)
-            {
-                reference.Pool.Release(gameObject);
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
-            _Pool.Release(gameObject);
+            PoolRef.Release(gameObject);
         }
     }
-
-    
+    #endregion Unity Methods
 }
+

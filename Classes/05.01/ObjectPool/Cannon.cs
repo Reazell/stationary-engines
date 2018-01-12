@@ -2,22 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cannon : MonoBehaviour {
-    [SerializeField] public GameObject cannonBall;
-    [SerializeField] private ObjectPool _Pool;
+public class Cannon : MonoBehaviour
+{
+    #region Inspector Variables
+    [SerializeField] private GameObject _Projectile;
+    [SerializeField] public ObjectPool _Pool;
+    #endregion
 
-	void Update () {
+    #region Unity Methods
+    void FixedUpdate()
+    {
         if (Input.GetKey(KeyCode.Space))
         {
             Shoot();
         }
+    }
+    #endregion
 
-	}
-
+    #region Private Methods
     private void Shoot()
     {
         var obj = _Pool.Request();
-        obj.AddComponent<PoolReference>().
+        obj.GetComponent<CannonBall>().PoolRef = _Pool;
         obj.transform.position = transform.position;
     }
+    #endregion
 }
+
