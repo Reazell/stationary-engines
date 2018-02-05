@@ -72,8 +72,8 @@ Design :
 - [ ] Various hops/beer types
 
 Optional Components :
-- [ ] Accepting orders
-- [ ] Start game screen
+- [x] Accepting orders
+- [x] Start game screen
 - [ ] Quality rating on all products to determine price/bonus to orderds
 
 **References:**
