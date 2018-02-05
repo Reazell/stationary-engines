@@ -46,8 +46,6 @@
 * Farm building
 * Adding competition
 * Implementing beer-themed events (e.g. oktoberfet)
-* Detailed brewing with custom bottles and ingredients
-* Populating game map with various interactions and activities
 
 **Prototyping progression :**
 
