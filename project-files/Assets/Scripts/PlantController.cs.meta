@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 29be89abbb818044f9a0b7be9e27ffc4
+timeCreated: 1510592329
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - T_Grass: {fileID: 21300000, guid: 72d195964cbbb974a8d4af0fff704661, type: 3}
+  - T_Dirt: {fileID: 21300000, guid: a1477348bf1f16a45be0bd7700b4d1c9, type: 3}
+  - T_Seed: {fileID: 21300000, guid: bc14fb0bef334094293684b08dede66e, type: 3}
+  - WetDirt: {fileID: 21300000, guid: 4c16bd41b5abcfb42a40700be97cda4c, type: 3}
+  - Stage1: {fileID: 21300000, guid: 90f94c7ef0e06f844906cdf64366ec65, type: 3}
+  - Stage2: {fileID: 21300000, guid: 207d2b6da310c674e9713ce6ee851de0, type: 3}
+  - HarvestReady: {fileID: 21300000, guid: 39331f0eaac32ea4bbcab1ba0515b2c3, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
